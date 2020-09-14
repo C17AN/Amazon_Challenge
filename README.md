@@ -37,3 +37,14 @@
 - `app.use(express.json())` 와 `app.use(express.urlencoded())` 차이 정리하기
 
 - `cors` !!!! 반드시 정리하기 (멘토님도 강조했던거)
+
+---
+
+### 메모
+
+- `firebase init` 을 하면 나타나는 설정 중, 이 앱에서는 `function` 과 `hosting` 을 사용함.  
+이 때, `function` 은 배포되어서는 안됨 -> 따라서 배포 시 `$ firebase deploy --only hosting` 명령으로 `hosting` 설정만이 배포되게 해야함.
+
+> 팁 하나 더
+
+`firebase init` 을 하면 중간에 `public` 디렉토리를 배포할 것이냐고 물음 -> y 누르지 말고 `build` 라고 쳐서 배포 디렉토리를 `bulid` 폴더로 지정해줌.
