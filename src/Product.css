@@ -15,6 +15,13 @@
   font-family: "Amazon Ember";
 }
 
+.product:hover {
+  box-shadow: 2px 2px 8px lightslategray;
+  transition: ease 0.15s;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
 .product > img {
   max-height: 200px;
   width: 100%;
@@ -38,6 +45,7 @@
   margin-top: 10px;
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
+  cursor: pointer;
 }
 
 .product__rating {

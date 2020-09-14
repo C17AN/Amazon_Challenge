@@ -3,10 +3,19 @@ import Header from "./Header";
 import Home from "./Home";
 import Login from "./Login";
 import Checkout from "./Checkout";
+import Orders from "./Orders";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
+import Footer from "./Footer";
+import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe(
+  "pk_test_51HQveGJikigjCjFRtgoe9B419EDSBqj8wFqpj2hNkKXGhn2NlrklR6KZ1k6lZnvdnHiAcFLR5xlLq2uxnlFIcRas00Oonppz1W"
+);
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -36,6 +45,9 @@ function App() {
       <div className="app">
         <Header></Header>
         <Switch>
+          <Route path="/orders">
+            <Orders></Orders>
+          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
@@ -45,8 +57,13 @@ function App() {
           <Route path="/checkout">
             <Checkout></Checkout>
           </Route>
+          <Route path="/payment">
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
+          </Route>
         </Switch>
-        {/* Home */}
+        <Footer></Footer>
       </div>
     </Router>
   );
