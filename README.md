@@ -8,9 +8,6 @@
 
 - 4일차 - stripe를 사용한 결제 구현, 클라우드 함수 설정
 
-<<<<<<< Updated upstream
-> [배포 링크](https://challenge-87510.web.app/)
-=======
 - 5일차 - 최종 배포, 결제용 클라우드 함수 구현 및 주문 페이지 제작
 
 ---
@@ -18,7 +15,3 @@
 > [배포 링크](https://challenge-87510.web.app/)
 
 > 로컬 테스트방법 : `$ npm run start`
-
-
-
->>>>>>> Stashed changes
