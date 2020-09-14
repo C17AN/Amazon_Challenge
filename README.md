@@ -15,3 +15,25 @@
 > [배포 링크](https://challenge-87510.web.app/)
 
 > 로컬 테스트방법 : `$ npm run start`
+
+---
+
+### 혼자 해볼것들
+
+- 회원가입 컴포넌트 만들기
+
+- 상품 상세뷰 컴포넌트 만들기
+
+- 패비콘 수정하기
+
+- footer 컴포넌트 만들기
+
+---
+
+### 정리해야 할것들
+
+- useContext 사용법 정리하기 (리덕스랑 같이)
+
+- `app.use(express.json())` 와 `app.use(express.urlencoded())` 차이 정리하기
+
+- `cors` !!!! 반드시 정리하기 (멘토님도 강조했던거)
